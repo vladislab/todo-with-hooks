@@ -7,7 +7,7 @@ import Grid from "@material-ui/core/Grid";
 import TodoList from "./TodoList";
 import TodoForm from "./TodoForm";
 
-import { TodosProvider } from "./contexts/todos.context";
+import { TodosProvider, DispatchContext } from "./contexts/todos.context";
 
 export default function TodoApp() {
   return (
@@ -29,6 +29,7 @@ export default function TodoApp() {
         <Grid container justify="center" style={{ marginTop: "1rem" }}>
           <Grid item xs={11} md={8} lg={4}>
             <TodosProvider>
+              <DispatchProvider />
               <TodoForm />
               <TodoList />
             </TodosProvider>
